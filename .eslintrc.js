@@ -14,8 +14,8 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'class-name-casing':'off',
     'no-tabs':'off',
-    'brace-style':'off'
+    'brace-style':'off',
+    '@typescript-eslint/no-explicit-any':'off'
   }
 }
