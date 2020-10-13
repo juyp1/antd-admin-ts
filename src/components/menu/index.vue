@@ -10,7 +10,7 @@
                 v-for="(item,index) of routers">
       <template v-slot:title>
         <span>
-          <icon-font :type="item.meta.icon!=undefined?item.meta.icon:'icon-diannao'" />
+          <icon-font :type="item.meta.icon!=undefined?item.meta.icon:'icon-diannao1'" />
           <span>{{item.meta.title}}</span>
         </span>
       </template>
@@ -21,7 +21,7 @@
                      v-if="!subitem.meta.hideInMenu&&subitem.children==undefined"
                      @click="handleitem(item,subitem)">
 
-          <icon-font :type="subitem.meta.icon!=undefined?subitem.meta.icon:'icon-diannao'" /> {{subitem.meta.title}}
+          <icon-font :type="subitem.meta.icon!=undefined?subitem.meta.icon:'icon-diannao1'" /> {{subitem.meta.title}}
         </a-menu-item>
         <a-sub-menu :title="subitem.meta.title"
                     v-if="!subitem.meta.hideInMenu&&subitem.children!==undefined&&subitem.children.length>0">
@@ -29,7 +29,7 @@
                        :key="csubmitem.path"
                        @click="handleitem(item,subitem,csubmitem)">
             <div v-if="!csubmitem.meta.hideInMenu">
-              <icon-font :type="csubmitem.meta.icon!=undefined?csubmitem.meta.icon:'icon-diannao'" /> {{csubmitem.meta.title}}
+              <icon-font :type="csubmitem.meta.icon!=undefined?csubmitem.meta.icon:'icon-diannao1'" /> {{csubmitem.meta.title}}
             </div>
           </a-menu-item>
         </a-sub-menu>

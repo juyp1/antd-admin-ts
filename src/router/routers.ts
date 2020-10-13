@@ -35,7 +35,7 @@ export default [
     meta: {
       hideInMenu: false,
       title: '任务管理',
-      icon: 'icon-dingdan'
+      icon: 'icon-huabanfuben'
       // access: ['admin:order']
     },
     component: Main,
@@ -79,6 +79,7 @@ export default [
     name: 'mytask',
 
     meta: {
+      icon: 'icon-huabanfuben',
       hideInMenu: false,
       title: '我的任务'
     },
@@ -113,6 +114,7 @@ export default [
     path: '/task',
     name: 'task',
     meta: {
+      icon: 'icon-huabanfuben',
       title: '作业指导',
       hideInMenu: false
 
@@ -168,6 +170,7 @@ export default [
     name: 'sysp',
 
     meta: {
+      icon: 'icon-huabanfuben',
       hideInMenu: false,
       title: '系统参数'
     },
@@ -190,6 +193,7 @@ export default [
     name: 'system',
 
     meta: {
+      icon: 'icon-huabanfuben',
       hideInMenu: false,
       title: '系统管理'
     },
