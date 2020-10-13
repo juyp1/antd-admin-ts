@@ -24,7 +24,7 @@
             </a-row>
             <a-row>
               <a-col :span="24">
-                <div class="title">中 青 MES 系 统</div>
+                <div class="title">影 像 系 统</div>
               </a-col>
             </a-row>
             <a-row type="flex"

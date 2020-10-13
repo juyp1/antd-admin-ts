@@ -29,39 +29,45 @@ export default [
     ]
   },
   {
-    path: '/order',
-    name: 'order',
+    path: '/work',
+    name: 'work',
 
     meta: {
       hideInMenu: false,
-      title: '生产管理',
-      icon: 'icon-dingdan',
-      access: ['admin:order']
+      title: '任务管理',
+      icon: 'icon-dingdan'
+      // access: ['admin:order']
     },
     component: Main,
     children: [
       {
-        path: 'orderlist',
-        name: 'orderlist',
+        path: 'edit',
+        name: 'edit',
 
         meta: {
-          title: '生产订单',
-          hideInMenu: false,
-          access: ['admin:order']
+          title: '任务编辑',
+          hideInMenu: false
         },
-
         component: () => import('@/views/order/order/index.vue')
-
       }, {
-        path: 'storelist',
-        name: 'storelist',
-
+        path: 'see',
+        name: 'see',
         meta: {
-          title: '门店管理',
-          hideInMenu: false,
-          access: ['admin:store']
-        },
+          title: '任务查看',
+          hideInMenu: false
 
+        },
+        component: () => import('@/views/order/store/index.vue')
+
+      },
+      {
+        path: 'browse',
+        name: 'browse',
+        meta: {
+          title: '任务浏览',
+          hideInMenu: false
+
+        },
         component: () => import('@/views/order/store/index.vue')
 
       }
@@ -69,30 +75,30 @@ export default [
     ]
   },
   {
-    path: '/warehouse',
-    name: 'warehouse',
+    path: '/mytask',
+    name: 'mytask',
 
     meta: {
       hideInMenu: false,
-      title: '仓库管理'
+      title: '我的任务'
     },
     component: Main,
     children: [
       {
-        path: 'warehousepersonlist',
-        name: 'warehousepersonlist',
+        path: 'videoup',
+        name: 'videoup',
         meta: {
-          title: '仓库人员管理',
+          title: '影像上传',
           hideInMenu: false
         },
         component: () => import('@/views/warehouse/personlist/index.vue')
 
       }, {
-        path: 'warehouselist',
-        name: 'warehouselist',
+        path: 'subscribe',
+        name: 'subscribe',
 
         meta: {
-          title: '仓库管理',
+          title: '我的订阅',
           hideInMenu: false
         },
 
@@ -103,52 +109,122 @@ export default [
     ]
   },
   {
-    path: '/resource',
-    name: 'resource',
 
+    path: '/task',
+    name: 'task',
     meta: {
-      hideInMenu: true,
-      title: '资源维护',
-      access: ['admin:resource']
+      title: '作业指导',
+      hideInMenu: false
+
     },
     component: Main,
     children: [
-
       {
-        path: 'equipment',
-        name: 'equipment',
+        path: 'position',
+        name: 'position',
         meta: {
-          title: '设备类型',
-          hideInMenu: false,
-          access: ['admin:equipment']
+          title: '部位维护',
+          hideInMenu: false
+
+          // access:[]
         },
-        component: ParentView,
-        children: [
-          {
-            path: 'care',
-            name: 'care',
-            meta: {
-              title: '保养维护',
-              hideInMenu: false
+        component: () => import('@/views/resource/equipment/care/index.vue')
 
-              // access:[]
-            },
-            component: () => import('@/views/resource/equipment/care/index.vue')
+      }, {
+        path: 'procedure',
+        name: 'procedure',
+        meta: {
+          title: '工序维护',
+          hideInMenu: false
+          // access:[]
+        },
+        component: () => import('@/views/resource/equipment/checklist/index.vue')
 
-          }, {
-            path: 'check',
-            name: 'check',
-            meta: {
-              title: '点检维护',
-              hideInMenu: false
-              // access:[]
-            },
-            component: () => import('@/views/resource/equipment/checklist/index.vue')
+      }, {
+        path: 'technology',
+        name: 'technology',
+        meta: {
+          title: '工艺维护',
+          hideInMenu: false
+          // access:[]
+        },
+        component: () => import('@/views/resource/equipment/checklist/index.vue')
 
-          }]
+      }, {
+        path: 'tasks',
+        name: 'tasks',
+        meta: {
+          title: '作业维护',
+          hideInMenu: false
+          // access:[]
+        },
+        component: () => import('@/views/resource/equipment/checklist/index.vue')
+
+      }]
+
+  },
+  {
+    path: '/sysp',
+    name: 'sysp',
+
+    meta: {
+      hideInMenu: false,
+      title: '系统参数'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'timer',
+        name: 'timer',
+        meta: {
+          title: '拍摄时长',
+          hideInMenu: false
+        },
+        component: () => import('@/views/warehouse/personlist/index.vue')
 
       }
+    ]
+  },
+  {
+    path: '/system',
+    name: 'system',
 
+    meta: {
+      hideInMenu: false,
+      title: '系统管理'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'dep',
+        name: 'dep',
+        meta: {
+          title: '部门维护',
+          hideInMenu: false
+        },
+        component: () => import('@/views/warehouse/personlist/index.vue')
+
+      },
+      {
+        path: 'role',
+        name: 'role',
+        meta: {
+          title: '角色维护',
+          hideInMenu: false
+        },
+        component: () => import('@/views/warehouse/personlist/index.vue')
+
+      },
+      {
+        path: 'users',
+        name: 'users',
+        meta: {
+          title: '用户维护',
+          hideInMenu: false
+        },
+        component: () => import('@/views/warehouse/personlist/index.vue')
+
+      }
     ]
   }
 ]

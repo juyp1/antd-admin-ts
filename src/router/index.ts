@@ -28,7 +28,7 @@ router.beforeEach((to, from, next) => {
     // console.log(to)
 
     if (store.state.user.userFunc.length === 0) {
-      store.dispatch('user/getUserInfoAction', token)
+      // store.dispatch('user/getUserInfoAction', token)
     }
     // store.dispatch('user/getUserInfoAction', token);
     // next()
